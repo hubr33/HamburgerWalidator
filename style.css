@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Yusei Magic", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(315deg, #3f2066 40%, #6a2f79 80%);
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  position: relative;
+  width: 800px;
+  height: 700px;
+  background: linear-gradient(315deg, #2f8ab4 40%, #6b0dd8 80%);
+  box-shadow: 3px 4px 10px black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.head {
+  position: absolute;
+  padding: 20px 40px;
+  font-size: 30px;
+  width: 500px;
+}
+
+.head button {
+  position: absolute;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  outline-style: none;
+  transition: 0.3s;
+}
+
+.head button i {
+  font-size: 30px;
+  color: #ccc;
+  transform: scale(1);
+  transition: 0.2s;
+}
+
+.head button.active {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.head button i:hover {
+  font-size: 30px;
+  color: #ccc;
+  transform: scale(0.8);
+}
+
+.note {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  width: 700px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.1);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 3px;
+  overflow: hidden;
+  transition: left 0.5s, height 0.5s 0.5s;
+}
+
+.note.active2 {
+  position: absolute;
+  left: 150%;
+  width: 700px;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 6px;
+  transition: height 0.5s, left 0.5s 0.5s;
+}
+
+.note h1 {
+  font-size: 50px;
+  margin-top: 10px;
+}
+
+.note label,
+.note input,
+.note select {
+  font-size: 18px;
+  width: 40%;
+  padding: 6px 0;
+  text-align: center;
+  outline-style: none;
+  -moz-appearance: textfield;
+}
+
+.accept {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  transform: scale(1);
+  bottom: 10px;
+  border: 2px solid violet;
+  padding: 4px 6px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+
+.accept:hover {
+  transform: scale(0.95);
+  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 18px;
+}
+
+p.error {
+  color: red;
+  visibility: visible;
+}
+
+p {
+  visibility: hidden;
+}
+
+.show-registered {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 580px;
+  height: 300px;
+  background-color: rgba(240, 240, 240, 0.9);
+  left: 20px;
+  top: -400px;
+  border-radius: 6px;
+  box-shadow: 5px 5px 8px black;
+  transition: 0.5s linear;
+}
+
+.show-registered.show {
+  top: 100px;
+}
+
+.show-registered h2 {
+  font-size: 32px;
+  color: green;
+}
+
+.show-registered .user-name,
+.show-registered .user-age,
+.show-registered .user-sex {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.show-registered .user-name span,
+.show-registered .user-age span,
+.show-registered .user-sex span {
+  font-weight: 500;
+}

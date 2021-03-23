@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f85160339b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="head">
+        <h2>Kliknij aby wypełnić</h2>
+        <button><i class="fas fa-arrow-left"></i></button>
+      </div>
+
+      <div class="note active2">
+        <h1>Rejestracja</h1>
+        <label for="name">Wpisz swoje imię</label>
+        <input type="text" id="name" />
+
+        <label for="surname">Wpisz swoje nazwisko</label>
+        <input type="text" id="surname" />
+
+        <label for="age">Wpisz swój wiek</label>
+        <input type="number" id="age" />
+
+        <label for="sex">Wybierz swoją płeć</label>
+        <select id="sex" onchange="selectValue()">
+          <option value="0" selected disabled>- Wybierz płeć -</option>
+          <option value="1">Mężczyzna</option>
+          <option value="2">Kobieta</option>
+        </select>
+
+        <button class="accept">Akceptuj</button>
+        <p>Wypełnij wszystkie pola!</p>
+      </div>
+    </div>
+
+    <div class="show-registered">
+      <h2>Rejestracja przebiegła pomyślnie!</h2>
+      <div class="user-name">Imię i nazwisko: <span></span></div>
+      <div class="user-age">Wiek: <span></span> lata</div>
+      <div class="user-sex">Płeć: <span></span></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
